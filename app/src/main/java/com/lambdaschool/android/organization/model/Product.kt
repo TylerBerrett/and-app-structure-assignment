@@ -1,5 +1,9 @@
 package com.lambdaschool.android.organization.model
 
 data class Product(
-    var productName: String = "",
-    var productDescription: String = "")
+    val productName: String = "",
+    val productDescription: String = "",
+    val productPrice: Double = 0.00,
+    val productTax: Double = 0.00,
+    val productDiscount: Double = 0.00
+)
