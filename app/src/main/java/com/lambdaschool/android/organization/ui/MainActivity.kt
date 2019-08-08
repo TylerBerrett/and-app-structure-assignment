@@ -1,8 +1,10 @@
 package com.lambdaschool.android.organization.ui
 
+import android.app.Application
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.lambdaschool.android.organization.R
+import com.lambdaschool.android.organization.application.LambdaApplication
 import com.lambdaschool.android.organization.model.Product
 import com.lambdaschool.android.organization.util.DateUtils
 import com.lambdaschool.android.organization.util.TextUtils
@@ -15,13 +17,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         title = "Product Details"
         setContentView(R.layout.activity_main)
-        displayProductDetails()
+        val product = (application as LambdaApplication).product
+        displayProductDetails(product)
 
     }
 
-    val product = Product("Hot Pockets", "Pizza Flavor", 2.98,0.75, 0.05)
 
-    private fun displayProductDetails() {
+
+    private fun displayProductDetails(product: Product) {
         // todo: Instantiate a Product, set its characteristics, and
         // set each of the fields on the corresponding TextViews from the layout
         // use the appropriate Util methods for formatting the fields

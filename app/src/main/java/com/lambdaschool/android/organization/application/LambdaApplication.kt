@@ -5,6 +5,7 @@ import com.lambdaschool.android.organization.model.Product
 
 class LambdaApplication : Application() {
     // todo: Maybe define a model in this class?
+    val product = Product("Hot Pockets", "Pizza Flavor", 2.98,0.75, 0.05)
 
     override fun onCreate() {
         super.onCreate()
